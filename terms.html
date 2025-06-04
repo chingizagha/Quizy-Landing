@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quizy - Terms of Service</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .app-logo {
+            height: 60px;
+            width: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
+        }
+        
+        .header h1 {
+            color: #ffffff;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+        }
+        
+        .back-link {
+            color: #64B5F6;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: auto;
+            padding: 8px 16px;
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background-color: rgba(100, 181, 246, 0.1);
+        }
+        
+        /* Content */
+        .content {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .content h2 {
+            color: #ffffff;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .content h3 {
+            color: #b3d9ff;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+        
+        .content p {
+            color: #d0d0d0;
+            margin-bottom: 15px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .content ul {
+            margin: 15px 0 15px 20px;
+        }
+        
+        .content li {
+            color: #d0d0d0;
+            margin-bottom: 8px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .highlight {
+            background-color: rgba(100, 181, 246, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #90CAF9;
+        }
+        
+        .pricing-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .pricing-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .pricing-option {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .pricing-option h4 {
+            color: #90CAF9;
+            margin-bottom: 5px;
+        }
+        
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .contact-box a {
+            color: #64B5F6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-box a:hover {
+            color: #90CAF9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            color: #b0b0b0;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #64B5F6;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #90CAF9;
+        }
+        
+        .copyright {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .back-link {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .pricing-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .app-logo {
+                height: 50px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/quizy-logo.png" alt="Quizy Logo" class="app-logo">
+                <h1>Terms of Service</h1>
+                <a href="javascript:history.back()" class="back-link">← Back to App</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Terms of Service for Quizy</h2>
+            <p><strong>Effective Date:</strong> January 1, 2025</p>
+            <p><strong>Last Updated:</strong> January 1, 2025</p>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By downloading, accessing, or using the Quizy mobile application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our app.</p>
+
+            <h3>2. Description of Service</h3>
+            <p>Quizy is a mobile quiz application that provides users with engaging quiz questions across multiple categories including science, history, pop culture, sports, and more. The app offers both free content and premium subscription features.</p>
+
+            <h3>3. User Accounts</h3>
+            <p>To access certain features of Quizy, you may be required to create an account. You are responsible for:</p>
+            <ul>
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Providing accurate and complete information</li>
+                <li>Notifying us immediately of any unauthorized use</li>
+            </ul>
+
+            <h3>4. Subscription Services</h3>
+            <p>Quizy offers premium subscription services with <span class="highlight">two pricing options</span>:</p>
+            
+            <div class="pricing-box">
+                <h4>Subscription Options</h4>
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h4>Monthly Plan</h4>
+                        <p>Access to premium quiz content and features with monthly billing</p>
+                    </div>
+                    <div class="pricing-option">
+                        <h4>Annual Plan</h4>
+                        <p>Full year access with significant cost savings compared to monthly</p>
+                    </div>
+                </div>
+                
+                <h4>Subscription Terms:</h4>
+                <ul>
+                    <li>All subscriptions are processed through Apple's App Store</li>
+                    <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
+                    <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                    <li>You can manage and cancel subscriptions through your App Store account settings</li>
+                    <li>No refunds for partial periods when cancelling</li>
+                    <li>Premium features remain accessible until the end of the current billing period after cancellation</li>
+                </ul>
+            </div>
+
+            <h3>5. Acceptable Use</h3>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the app for any unlawful purpose or activity</li>
+                <li>Attempt to reverse engineer, hack, or manipulate the app</li>
+                <li>Share quiz content or answers outside the app</li>
+                <li>Create multiple accounts to circumvent limitations</li>
+                <li>Use automated tools or scripts to interact with the app</li>
+                <li>Interfere with the proper functioning of the app</li>
+            </ul>
+
+            <h3>6. Intellectual Property</h3>
+            <p>All content in Quizy, including but not limited to quiz questions, answers, explanations, graphics, and software, is owned by us or our licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+
+            <h3>7. User Content</h3>
+            <p>Any content you submit to Quizy (such as feedback or suggestions) may be used by us for improving the app. You retain ownership of your content but grant us a license to use it for app-related purposes.</p>
+
+            <h3>8. Privacy</h3>
+            <p>Your privacy is important to us. Please review our Privacy Policy, which explains how we collect, use, and protect your information when you use our service.</p>
+
+            <h3>9. Disclaimers</h3>
+            <p>Quizy is provided "as is" without warranties of any kind. We do not guarantee:</p>
+            <ul>
+                <li>Uninterrupted or error-free operation</li>
+                <li>Accuracy of quiz content or answers</li>
+                <li>Compatibility with all devices</li>
+                <li>Availability of specific features or content</li>
+            </ul>
+
+            <h3>10. Limitation of Liability</h3>
+            <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of Quizy.</p>
+
+            <h3>11. Termination</h3>
+            <p>We may terminate or suspend your account and access to Quizy at our discretion, without notice, for conduct that we believe violates these Terms of Service or is harmful to other users, us, or third parties, or for any other reason.</p>
+
+            <h3>12. Changes to Terms</h3>
+            <p>We reserve the right to modify these Terms of Service at any time. We will notify users of any material changes through the app. Your continued use of Quizy after such modifications constitutes acceptance of the updated terms.</p>
+
+            <h3>13. Governing Law</h3>
+            <p>These Terms of Service are governed by and construed in accordance with applicable laws. Any disputes arising from these terms or your use of Quizy will be subject to the jurisdiction of appropriate courts.</p>
+
+            <h3>14. App Store Terms</h3>
+            <p>Your use of Quizy is also subject to Apple's App Store Terms of Service. In case of conflict between these terms and Apple's terms, Apple's terms shall prevail regarding App Store-related matters.</p>
+
+            <div class="contact-box">
+                <h3>15. Contact Information</h3>
+                <p>If you have any questions about these Terms of Service, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:cingiz167@icloud.com">cingiz167@icloud.com</a></p>
+                <p><strong>App:</strong> Quizy - Test Your Knowledge</p>
+                <p><strong>Developer:</strong> Chingiz Agha, Sumgait</p>
+            </div>
+
+            <p><em>By using Quizy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                Made by Chingiz Agha in Sumgait © 2025
+            </div>
+        </footer>
+    </footer>
+</body>
+</html>
