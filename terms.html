@@ -48,12 +48,24 @@
             gap: 20px;
         }
         
-        .app-logo {
+        .app-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .app-icon {
+            width: 60px;
             height: 60px;
-            width: auto;
+            background: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
             border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            object-fit: contain;
         }
         
         .header h1 {
@@ -134,7 +146,7 @@
         
         .pricing-options {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin: 15px 0;
         }
@@ -243,8 +255,10 @@
         }
         
         @media (max-width: 480px) {
-            .app-logo {
+            .app-icon {
+                width: 50px;
                 height: 50px;
+                font-size: 20px;
             }
             
             .content {
@@ -257,8 +271,10 @@
     <div class="header">
         <div class="container">
             <div class="header-content">
-                <img src="assets/quizy-logo.png" alt="Quizy Logo" class="app-logo">
-                <h1>Terms of Service</h1>
+                <div class="app-title">
+                    <div class="app-icon">Q</div>
+                    <h1>Terms of Service</h1>
+                </div>
                 <a href="javascript:history.back()" class="back-link">← Back to App</a>
             </div>
         </div>
@@ -267,7 +283,6 @@
     <div class="container">
         <div class="content">
             <h2>Terms of Service for Quizy</h2>
-            <!-- <p><strong>Effective Date:</strong> January 1, 2025</p> -->
             <p><strong>Last Updated:</strong> January 1, 2025</p>
 
             <h3>1. Acceptance of Terms</h3>
@@ -286,17 +301,27 @@
             </ul>
 
             <h3>4. Subscription Services</h3>
-            <p>Quizy offers premium subscription services with <span class="highlight">two pricing options</span>:</p>
+            <p>Quizy offers premium subscription services with <span class="highlight">three auto-renewable subscription options</span>:</p>
             
             <div class="pricing-box">
-                <h4>Subscription Options</h4>
+                <h4>Auto-Renewable Subscription Plans</h4>
                 <div class="pricing-options">
                     <div class="pricing-option">
-                        <h4>Monthly Plan</h4>
+                        <h4>Quizy Premium Weekly</h4>
+                        <p><strong>Length:</strong> 1 Week</p>
+                        <p><strong>Price:</strong> $1.99/week</p>
+                        <p>Access to premium quiz content and features with weekly billing</p>
+                    </div>
+                    <div class="pricing-option">
+                        <h4>Quizy Premium Monthly</h4>
+                        <p><strong>Length:</strong> 1 Month</p>
+                        <p><strong>Price:</strong> $6.99/month</p>
                         <p>Access to premium quiz content and features with monthly billing</p>
                     </div>
                     <div class="pricing-option">
-                        <h4>Annual Plan</h4>
+                        <h4>Quizy Premium Annual</h4>
+                        <p><strong>Length:</strong> 1 Year</p>
+                        <p><strong>Price:</strong> $59.99/year ($5.00/month)</p>
                         <p>Full year access with significant cost savings compared to monthly</p>
                     </div>
                 </div>
@@ -377,7 +402,7 @@
             <div class="copyright">
                 Made by <a href="https://chingizagha.com">Chingiz Agha</a> in Sumgait © 2025
             </div>
-        </footer>
+        </div>
     </footer>
 </body>
 </html>
